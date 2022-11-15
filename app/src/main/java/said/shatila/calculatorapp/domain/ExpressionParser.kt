@@ -4,20 +4,24 @@ class ExpressionParser(private val calculation: String) {
 
     fun parse(): List<ExpressionPart> {
         val result = mutableListOf<ExpressionPart>()
+
         var i = 0
-        while (i < calculation.length) {
-            val char = calculation[i]
+        while(i < calculation.length) {
+            val curChar = calculation[i]
             when {
-                char in operationSymbols -> {
-                    val operation = operationFromSymbol(char)
-                    operation?.let { ExpressionPart.Op(it) }?.let { result.add(it) }
+                curChar in operationSymbols -> {
+                    operationFromSymbol(curChar).let { ExpressionPart.Op(it) }.let {
+                        result.add(
+                            it
+                        )
+                    }
                 }
-                char.isDigit() -> {
+                curChar.isDigit() -> {
                     i = parseNumber(i, result)
                     continue
                 }
-                char in "()" -> {
-                    parseParentheses(char, result)
+                curChar in "()" -> {
+                    parseParentheses(curChar, result)
                 }
             }
             i++
@@ -28,22 +32,22 @@ class ExpressionParser(private val calculation: String) {
     private fun parseNumber(startingIndex: Int, result: MutableList<ExpressionPart>): Int {
         var i = startingIndex
         val numberAsString = buildString {
-            while (startingIndex < calculation.length && calculation[i] in "0123456789.") {
+            while(i < calculation.length && calculation[i] in "0123456789.") {
                 append(calculation[i])
                 i++
             }
         }
         result.add(ExpressionPart.Number(numberAsString.toDouble()))
-        return i -1
+        return i
     }
 
     private fun parseParentheses(curChar: Char, result: MutableList<ExpressionPart>) {
         result.add(
             ExpressionPart.Parenthesis(
-                when (curChar) {
+                parenthesis = when(curChar) {
                     '(' -> ParenthesisType.Open
                     ')' -> ParenthesisType.Close
-                    else -> throw IllegalArgumentException("Invalid parenthesis")
+                    else -> throw IllegalArgumentException("Invalid parentheses type")
                 }
             )
         )

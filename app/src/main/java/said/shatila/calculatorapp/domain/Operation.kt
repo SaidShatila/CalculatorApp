@@ -1,20 +1,16 @@
 package said.shatila.calculatorapp.domain
 
 enum class Operation(val symbol: Char) {
-    //Different operations that can be performed while using the calculator
-
     ADD('+'),
     SUBTRACT('-'),
-    MULTIPLY('*'),
+    MULTIPLY('x'),
     DIVIDE('/'),
-    PERCENTAGE('%'),
-    EQUALS('=')
-
+    PERCENT('%'),
 }
 
 val operationSymbols = Operation.values().map { it.symbol }.joinToString("")
 
-fun operationFromSymbol(symbol: Char): Operation? {
+fun operationFromSymbol(symbol: Char): Operation {
     return Operation.values().find { it.symbol == symbol }
-        ?: throw IllegalArgumentException("Invalid operation symbol")
+        ?: throw IllegalArgumentException("Invalid symbol")
 }

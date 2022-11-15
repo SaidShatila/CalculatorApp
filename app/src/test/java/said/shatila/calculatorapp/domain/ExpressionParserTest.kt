@@ -8,11 +8,13 @@ class ExpressionParserTest {
 
     @Test
     fun `Simple expression is properly parsed`() {
-        // Given
+        // 1. GIVEN
         parser = ExpressionParser("3+5-3x4/3")
-        // Do something with what's given
-        val parts = parser.parse()
-        // Assert that the result is what you expect
+
+        // 2. DO SOMETHING WITH WHAT'S GIVEN
+        val actual = parser.parse()
+
+        // 3. ASSERT EXPECTED == ACTUAL
         val expected = listOf(
             ExpressionPart.Number(3.0),
             ExpressionPart.Op(Operation.ADD),
@@ -22,15 +24,17 @@ class ExpressionParserTest {
             ExpressionPart.Op(Operation.MULTIPLY),
             ExpressionPart.Number(4.0),
             ExpressionPart.Op(Operation.DIVIDE),
-            ExpressionPart.Number(3.0)
+            ExpressionPart.Number(3.0),
         )
-        assertThat(expected).isEqualTo(parts)
+        assertThat(expected).isEqualTo(actual)
     }
 
     @Test
     fun `Expression with parentheses is properly parsed`() {
         parser = ExpressionParser("4-(4x5)")
-        val parts = parser.parse()
+
+        val actual = parser.parse()
+
         val expected = listOf(
             ExpressionPart.Number(4.0),
             ExpressionPart.Op(Operation.SUBTRACT),
@@ -38,8 +42,8 @@ class ExpressionParserTest {
             ExpressionPart.Number(4.0),
             ExpressionPart.Op(Operation.MULTIPLY),
             ExpressionPart.Number(5.0),
-            ExpressionPart.Parenthesis(ParenthesisType.Close)
+            ExpressionPart.Parenthesis(ParenthesisType.Close),
         )
-        assertThat(expected).isEqualTo(parts)
+        assertThat(expected).isEqualTo(actual)
     }
 }
