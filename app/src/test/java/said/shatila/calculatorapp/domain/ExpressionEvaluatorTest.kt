@@ -1,10 +1,14 @@
 package said.shatila.calculatorapp.domain
 
 import com.google.common.truth.Truth.assertThat
+import org.junit.Before
 import org.junit.Test
 
 class ExpressionEvaluatorTest {
     private lateinit var evaluator: ExpressionEvaluator
+
+
+
 
     @Test
     fun `Simple expression properly evaluated`() {
