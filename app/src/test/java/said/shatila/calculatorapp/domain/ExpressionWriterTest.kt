@@ -10,10 +10,10 @@ class ExpressionWriterTest {
 
     private lateinit var writer: ExpressionWriter
 
+
     @Before
     fun setUp() {
         writer = ExpressionWriter()
-        
     }
 
     @Test
