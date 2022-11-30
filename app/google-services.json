@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "691159659885",
+    "project_id": "calculatorapp-5a1f8",
+    "storage_bucket": "calculatorapp-5a1f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691159659885:android:174618b231e6657536d664",
+        "android_client_info": {
+          "package_name": "said.shatila.calculatorapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "691159659885-89prl20cc57s3c735mb9674vbk9d6lln.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDb1UORICWz4fxZbZZVyLgKDHSQXLwrDng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "691159659885-89prl20cc57s3c735mb9674vbk9d6lln.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
