@@ -3,7 +3,7 @@ package said.shatila.calculatorapp
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import com.saidshatila.materialcalculatorapp.Constants
+import com.saidshatila.materialcalculator.Constants
 import said.shatila.calculatorapp.presentation.CalculatorScreen
 import said.shatila.calculatorapp.ui.theme.MaterialCalculatorTheme
 
