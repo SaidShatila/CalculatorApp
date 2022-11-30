@@ -1,4 +1,4 @@
-package com.saidshatila.materialcalculator
+package com.saidshatila.materialcalculatorapp
 
 object Constants {
     //uat for unit testing
