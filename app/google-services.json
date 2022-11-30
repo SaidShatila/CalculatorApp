@@ -33,6 +33,35 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691159659885:android:33f22e1a79004fd436d664",
+        "android_client_info": {
+          "package_name": "said.shatila.calculatorapp.staging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "691159659885-89prl20cc57s3c735mb9674vbk9d6lln.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDb1UORICWz4fxZbZZVyLgKDHSQXLwrDng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "691159659885-89prl20cc57s3c735mb9674vbk9d6lln.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"
