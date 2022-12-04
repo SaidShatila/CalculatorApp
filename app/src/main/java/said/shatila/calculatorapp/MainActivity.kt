@@ -18,6 +18,10 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+
+    private fun newUiFix(){
+        //Ui fix done
+    }
 }
 
 
